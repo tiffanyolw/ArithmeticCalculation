@@ -34,7 +34,7 @@ app.post("/", (req, res) => {
         result = arithmetic.divide(val1, val2);
         op = "Divide";
     } else {
-        return res.status(404).send("Operation not found");
+        return res.status(400).send("Operation not found");
     }
 
     let output = `Operation: ${op} <br/>`;
